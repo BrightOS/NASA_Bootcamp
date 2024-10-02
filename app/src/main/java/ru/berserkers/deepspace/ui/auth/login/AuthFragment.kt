@@ -81,6 +81,9 @@ class AuthFragment : Fragment() {
                             is Data.Ok -> onSuccessLogin()
                             is Data.Error ->
                                 (activity as MainActivity).showError(data.message)
+
+                            is Data.Loading -> TODO("Show progress bar")
+                            is Data.Local -> TODO()
                         }
                     }
                 }

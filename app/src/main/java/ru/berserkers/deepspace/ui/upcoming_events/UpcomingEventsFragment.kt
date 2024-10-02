@@ -21,7 +21,7 @@ class UpcomingEventsFragment : Fragment() {
     private var _binding: FragmentUpcomingEventsBinding? = null
     private val binding get() = _binding!!
 
-    private val launchesViewModel: UpcomingEventsViewModel by viewModels<UpcomingEventsViewModelImpl>()
+    private val launchesViewModel: UpcomingEventsViewModel by viewModels()
     private lateinit var upcomingEventsAdapter: UpcomingRecyclerAdapter
 
     private val handler = Handler(Looper.myLooper()!!)

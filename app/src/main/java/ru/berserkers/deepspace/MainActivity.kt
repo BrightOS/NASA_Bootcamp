@@ -20,12 +20,10 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupWithNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.FirebaseStorage
-import com.microsoft.windowsazure.messaging.notificationhubs.NotificationHub
 import dagger.hilt.android.AndroidEntryPoint
 import ru.berserkers.deepspace.data.fb_general.MFirebaseUser
 import ru.berserkers.deepspace.databinding.ActivityMainBinding
 import ru.berserkers.deepspace.databinding.NavHeaderMainBinding
-import ru.berserkers.deepspace.utils.AzureNotificationListener
 import ru.berserkers.deepspace.utils.Data
 import ru.berserkers.deepspace.utils.DimensionsUtil
 import java.io.IOException
@@ -65,10 +63,10 @@ class MainActivity : AppCompatActivity() {
             }
 
         // Azure notifications
-        NotificationHub.setListener(AzureNotificationListener(this))
+    //    NotificationHub.setListener(AzureNotificationListener(this))
         val connectionString = this.resources.getString(R.string.azure_connection_string)
         val hubName = this.resources.getString(R.string.azure_hub_name)
-        NotificationHub.start(this.application, hubName, connectionString)
+  //      NotificationHub.start(this.application, hubName, connectionString)
     }
 
 
@@ -129,6 +127,9 @@ class MainActivity : AppCompatActivity() {
                         navHeaderMainBinding.userAvatar.foreground =
                             getDrawable(R.drawable.ic_photo_mini)
                     }
+
+                    is Data.Loading -> TODO("Show progress bar")
+                    is Data.Local -> TODO()
                 }
             }
             navHeaderMainBinding.signIn.text = getString(R.string.sign_out)

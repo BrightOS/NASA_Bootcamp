@@ -7,7 +7,6 @@ import com.example.math_module.geometry.mult
 import com.example.math_module.geometry.normalized
 import com.example.math_module.geometry.sum
 import ru.berserkers.deepspace.R
-import ru.berserkers.deepspace.maths.matrix.*
 import ru.berserkers.deepspace.navigator.rendertype.LineRun
 import javax.microedition.khronos.opengles.GL10
 import kotlin.math.PI

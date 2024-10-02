@@ -1,8 +1,8 @@
 package ru.berserkers.deepspace.navigator.pointing
 
+import com.example.math_module.geometry.Vector3D
 import ru.berserkers.deepspace.maths.coords.GeocentricCoordinates
 import ru.berserkers.deepspace.maths.coords.LatLong
-import ru.berserkers.deepspace.maths.matrix.Vector3D
 import java.util.*
 
 

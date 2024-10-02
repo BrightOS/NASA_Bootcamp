@@ -8,7 +8,7 @@ import ru.berserkers.deepspace.navigator.pointing.VectorPointing
 
 class SensorManager(private val manager: SensorManager) : AbstractManager, SensorEventListener {
 
-    private val rotationSensor: Sensor = manager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)
+    private val rotationSensor: Sensor? = manager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)
     override var pointing: VectorPointing? = null
 
     override fun start() {

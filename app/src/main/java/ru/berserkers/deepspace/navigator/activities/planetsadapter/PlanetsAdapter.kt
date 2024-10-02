@@ -92,6 +92,8 @@ class PlanetsAdapter internal constructor(private val clickListener: OnPlanetCli
                     Planet.ISS -> {
                         text = itemView.context.getString(R.string.iss_description)
                     }
+
+                    Planet.Moon -> Unit
                 }
             }
 
